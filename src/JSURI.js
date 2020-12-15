@@ -1,3 +1,5 @@
+"use strict";
+
 // A version of encodeURIComponent which is compliant with RFC3896, as described
 // in the MDN documentation here:
 //

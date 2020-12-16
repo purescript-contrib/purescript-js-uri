@@ -1,5 +1,5 @@
 { name = "js-uri"
-, dependencies = [ "console", "effect", "psci-support" ]
+, dependencies = [ "assert", "effect", "functions", "maybe", "psci-support" ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }

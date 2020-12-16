@@ -9,7 +9,6 @@ import Prelude
 
 import Data.Function.Uncurried (Fn3, runFn3)
 import Data.Maybe (Maybe(..))
-import Data.String as String
 
 foreign import _encodeURIComponent :: Fn3 (String -> Maybe String) (String -> Maybe String) String (Maybe String)
 
@@ -35,6 +34,8 @@ foreign import _encodeURIComponent :: Fn3 (String -> Maybe String) (String -> Ma
 encodeURIComponent :: String -> Maybe String
 encodeURIComponent = runFn3 _encodeURIComponent (const Nothing) Just
 
+foreign import _encodeFormURLComponent :: Fn3 (String -> Maybe String) (String -> Maybe String) String (Maybe String)
+
 -- | URI-encode a string according to RFC3896, except with spaces encoded using
 -- | '+' instead of '%20' to comply with application/x-www-form-urlencoded.
 -- |
@@ -46,9 +47,7 @@ encodeURIComponent = runFn3 _encodeURIComponent (const Nothing) Just
 -- | Just "abc+ABC"
 -- | ```
 encodeFormURLComponent :: String -> Maybe String
-encodeFormURLComponent = do
-  let replace = String.replaceAll (String.Pattern "%20") (String.Replacement "+")
-  map replace <<< encodeURIComponent
+encodeFormURLComponent = runFn3 _encodeFormURLComponent (const Nothing) Just
 
 foreign import _decodeURIComponent :: Fn3 (String -> Maybe String) (String -> Maybe String) String (Maybe String)
 
@@ -74,6 +73,8 @@ foreign import _decodeURIComponent :: Fn3 (String -> Maybe String) (String -> Ma
 decodeURIComponent :: String -> Maybe String
 decodeURIComponent = runFn3 _decodeURIComponent (const Nothing) Just
 
+foreign import _decodeFormURLComponent :: Fn3 (String -> Maybe String) (String -> Maybe String) String (Maybe String)
+
 -- | Decode a URI according to application/x-www-form-urlencoded (for example,
 -- | a string containing '+' for spaces or query parameters).
 -- |
@@ -85,6 +86,4 @@ decodeURIComponent = runFn3 _decodeURIComponent (const Nothing) Just
 -- | Just "https://purescript.org?search query"
 -- | ```
 decodeFormURLComponent :: String -> Maybe String
-decodeFormURLComponent = do
-  let replace = String.replaceAll (String.Pattern "+") (String.Replacement "%20")
-  map replace <<< decodeURIComponent
+decodeFormURLComponent = runFn3 _decodeFormURLComponent (const Nothing) Just

@@ -11,3 +11,7 @@ New features:
 Bugfixes:
 
 Other improvements:
+
+## [1.0.0]
+
+Initial release of the library, containing the `encodeURIComponent`, `decodeURIComponent`, `encodeFormURLComponent`, and `decodeFormURLComponent` functions.

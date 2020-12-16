@@ -14,12 +14,12 @@
         "output"
     ],
     "dependencies": {
-        "purescript-functions": "^v4.0.0",
-        "purescript-maybe": "^v4.0.1"
+        "purescript-functions": "master",
+        "purescript-maybe": "master"
     },
     "devDependencies": {
-        "purescript-assert": "^v4.1.0",
-        "purescript-effect": "^v2.0.1",
-        "purescript-psci-support": "^v4.0.0"
+        "purescript-assert": "master",
+        "purescript-effect": "master",
+        "purescript-psci-support": "master"
     }
 }

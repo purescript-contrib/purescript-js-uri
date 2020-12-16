@@ -17,7 +17,29 @@ spago install js-uri
 
 ## Quick start
 
-The quick start hasn't been written yet (contributions are welcome!). The quick start covers a common, minimal use case for the library.
+This library provides functions for encoding and decoding URIs and additional functions that match `application/x-www-form-urlencoded`. To encode or decode a URI according to RFC3896:
+
+```purs
+import JSURI (encodeURIComponent, decodeURIComponent)
+
+> encodeURIComponent "https://purescript.org"
+Just "https%3A%2F%2Fpurescript.org"
+
+> encodeURIComponent "abc ABC"
+Just "abc%20ABC"
+
+> decodeURIComponent "https%3A%2F%2Fpurescript.org" == Just "https://purescript.org"
+> decodeURIComponent "https%3A%2F%2Fpurescript.org?search+query" == Just "https://purescript.org?search+query"
+```
+
+To use `form-urlencoding` instead, which uses `+` for spaces instead of `%20`:
+
+```purs
+import JSURI (encodeFormURLComponent, decodeFormURLComponent)
+
+> encodeFormURLComponent "abc ABC" == Just "abc+ABC"
+> decodeFormURLComponent "https%3A%2F%2Fpurescript.org?search+query" == Just "https://purescript.org?search query"
+```
 
 ## Documentation
 

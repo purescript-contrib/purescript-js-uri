@@ -5,6 +5,7 @@ Notable changes to this project are documented in this file. The format is based
 ## [Unreleased]
 
 Breaking changes (😱!!!):
+- Added support for PureScript 0.14 and dropped support for all previous versions (#1)
 
 New features:
 
@@ -14,4 +15,4 @@ Other improvements:
 
 ## [1.0.0]
 
-Initial release of the library, containing the `encodeURIComponent`, `decodeURIComponent`, `encodeFormURLComponent`, and `decodeFormURLComponent` functions.
+- Initial release of the library, containing the `encodeURIComponent`, `decodeURIComponent`, `encodeFormURLComponent`, and `decodeFormURLComponent` functions.

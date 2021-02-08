@@ -39,3 +39,19 @@ exports._decodeURIComponent = _decodeURIComponent;
 exports._decodeFormURLComponent = function _decodeFormURLComponent(fail, succeed, input) {
   return _decodeURIComponent(fail, succeed, input.replace(/\+/g, " "));
 };
+
+exports._encodeURI = function _encodeURI(fail, succeed, input) {
+  try {
+    return succeed(encodeURI(input));
+  } catch (err) {
+    return fail(err);
+  }
+};
+
+exports._decodeURI = function _decodeURI(fail, succeed, input) {
+  try {
+    return succeed(decodeURI(input));
+  } catch (err) {
+    return fail(err);
+  }
+};

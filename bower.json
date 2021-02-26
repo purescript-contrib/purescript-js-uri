@@ -1,25 +1,24 @@
 {
-    "name": "purescript-js-uri",
-    "license": [
-        "MIT"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/purescript-contrib/purescript-js-uri"
-    },
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "output"
-    ],
-    "dependencies": {
-        "purescript-functions": "master",
-        "purescript-maybe": "master"
-    },
-    "devDependencies": {
-        "purescript-assert": "master",
-        "purescript-effect": "master",
-        "purescript-psci-support": "master"
-    }
+  "name": "purescript-js-uri",
+  "license": [
+    "MIT"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript-contrib/purescript-js-uri.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-functions": "^5.0.0",
+    "purescript-maybe": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-assert": "^5.0.0",
+    "purescript-effect": "^3.0.0"
+  }
 }

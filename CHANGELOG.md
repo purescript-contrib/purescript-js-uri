@@ -23,6 +23,6 @@ Bugfixes:
 Other improvements:
 - Added support for PureScript 0.14 and dropped support for all previous versions (#1)
 
-## [1.0.0]
+## [v1.0.0](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v1.0.0) - 2020-12-16
 
 - Initial release of the library, containing the `encodeURIComponent`, `decodeURIComponent`, `encodeFormURLComponent`, and `decodeFormURLComponent` functions.

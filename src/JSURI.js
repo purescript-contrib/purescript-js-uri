@@ -15,7 +15,7 @@ function encodeURIComponent_to_RFC3986(input) {
 //
 // https://web.archive.org/web/20210117175449/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_ipv6
 function encodeURI_to_RFC3986(input) {
-  return input.replace(/%5B/g, '[').replace(/%5D/g, ']');
+  return input.replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 
 exports._encodeURIComponent = function _encodeURIComponent(fail, succeed, input) {

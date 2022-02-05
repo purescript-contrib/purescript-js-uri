@@ -9,6 +9,7 @@ import Test.Assert (assert)
 
 main :: Effect Unit
 main = do
+  assert $ encodeURIComponent "\xdc00" == Nothing -- Lone surrogate
   assert $ encodeURIComponent "https://purescript.org" == Just "https%3A%2F%2Fpurescript.org"
   assert $ encodeURIComponent "abc ABC" == Just "abc%20ABC"
   assert $ encodeFormURLComponent "abc ABC" == Just "abc+ABC"

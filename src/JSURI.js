@@ -34,7 +34,7 @@ function _decodeURIComponent(fail, succeed, input) {
   }
 }
 
-exports._decodeURIComponent = _decodeURIComponent;
+export {_decodeURIComponent};
 
 exports._decodeFormURLComponent = function encode(fail, succeed, input) {
   return _decodeURIComponent(fail, succeed, input.replace(/\+/g, " "));

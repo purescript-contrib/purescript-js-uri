@@ -1,5 +1,3 @@
-"use strict";
-
 // A helper which transforms the result ofencodeURIComponent to be compliant
 // with RFC3896, as described in the MDN documentation here:
 //

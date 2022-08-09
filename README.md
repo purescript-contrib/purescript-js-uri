@@ -3,7 +3,6 @@
 [![CI](https://github.com/purescript-contrib/purescript-js-uri/workflows/CI/badge.svg?branch=main)](https://github.com/purescript-contrib/purescript-js-uri/actions?query=workflow%3ACI+branch%3Amain)
 [![Release](https://img.shields.io/github/release/purescript-contrib/purescript-js-uri.svg)](https://github.com/purescript-contrib/purescript-js-uri/releases)
 [![Pursuit](https://pursuit.purescript.org/packages/purescript-js-uri/badge)](https://pursuit.purescript.org/packages/purescript-js-uri)
-[![Maintainer: thomashoneyman](https://img.shields.io/badge/maintainer-thomashoneyman-teal.svg)](https://github.com/thomashoneyman)
 
 URI encoding and decoding functions according to [RFC 3986](https://tools.ietf.org/html/rfc3986), implemented on top of JavaScript's builtin `encodeURIComponent` and `decodeURIComponent`. This library also contains support for encoding and decoding according to `application/x-www-form-urlencoded`.
 
@@ -51,7 +50,7 @@ import JSURI (encodeFormURLComponent, decodeFormURLComponent)
 If you get stuck, there are several ways to get help:
 
 - [Open an issue](https://github.com/purescript-contrib/purescript-js-uri/issues) if you have encountered a bug or problem.
-- [Search or start a thread on the PureScript Discourse](https://discourse.purescript.org) if you have general questions. You can also ask questions in the `#purescript` and `#purescript-beginners` channels on the [Functional Programming Slack](https://functionalprogramming.slack.com) ([invite link](https://fpchat-invite.herokuapp.com/)).
+- Ask general questions on the [PureScript Discourse](https://discourse.purescript.org) forum or the [PureScript Discord](https://purescript.org/chat) chat.
 
 ## Contributing
 

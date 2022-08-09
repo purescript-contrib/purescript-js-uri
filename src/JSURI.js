@@ -1,5 +1,3 @@
-"use strict";
-
 // A helper which transforms the result of encodeURIComponent to be compliant
 // with RFC3986, as described in the MDN documentation here:
 //
@@ -18,7 +16,7 @@ function encodeURI_to_RFC3986(input) {
   return input.replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 
-exports._encodeURIComponent = function _encodeURIComponent(fail, succeed, input) {
+export function _encodeURIComponent(fail, succeed, input) {
   try {
     return succeed(encodeURIComponent_to_RFC3986(encodeURIComponent(input)));
   } catch (err) {
@@ -26,7 +24,7 @@ exports._encodeURIComponent = function _encodeURIComponent(fail, succeed, input)
   }
 };
 
-exports._encodeFormURLComponent = function _encodeFormURLComponent(fail, succeed, input) {
+export function _encodeFormURLComponent(fail, succeed, input) {
   try {
     return succeed(encodeURIComponent_to_RFC3986(encodeURIComponent(input)).replace(/%20/g, "+"));
   } catch (err) {
@@ -34,7 +32,7 @@ exports._encodeFormURLComponent = function _encodeFormURLComponent(fail, succeed
   }
 };
 
-function _decodeURIComponent(fail, succeed, input) {
+export function _decodeURIComponent(fail, succeed, input) {
   try {
     return succeed(decodeURIComponent(input));
   } catch (err) {
@@ -42,13 +40,11 @@ function _decodeURIComponent(fail, succeed, input) {
   }
 }
 
-exports._decodeURIComponent = _decodeURIComponent;
-
-exports._decodeFormURLComponent = function _decodeFormURLComponent(fail, succeed, input) {
+export function _decodeFormURLComponent(fail, succeed, input) {
   return _decodeURIComponent(fail, succeed, input.replace(/\+/g, " "));
 };
 
-exports._encodeURI = function _encodeURI(fail, succeed, input) {
+export function _encodeURI(fail, succeed, input) {
   try {
     return succeed(encodeURI_to_RFC3986(encodeURI(input)));
   } catch (err) {
@@ -56,7 +52,7 @@ exports._encodeURI = function _encodeURI(fail, succeed, input) {
   }
 };
 
-exports._decodeURI = function _decodeURI(fail, succeed, input) {
+export function _decodeURI(fail, succeed, input) {
   try {
     return succeed(decodeURI(input));
   } catch (err) {

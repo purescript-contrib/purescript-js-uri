@@ -12,6 +12,18 @@ Bugfixes:
 
 Other improvements:
 
+## [v3.0.0](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v3.0.0) - 2022-04-27
+
+Breaking changes:
+- Update project and deps to PureScript v0.15.0 (#11 by @JordanMartinez)
+
+New features:
+
+Bugfixes:
+
+Other improvements:
+- Added `purs-tidy` formatter (#7 by @thomashoneyman)
+
 ## [v2.0.0](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v2.0.0) - 2021-02-26
 
 Breaking changes:

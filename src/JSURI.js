@@ -22,7 +22,7 @@ export function _encodeURIComponent(fail, succeed, input) {
   } catch (err) {
     return fail(err);
   }
-};
+}
 
 export function _encodeFormURLComponent(fail, succeed, input) {
   try {
@@ -30,7 +30,7 @@ export function _encodeFormURLComponent(fail, succeed, input) {
   } catch (err) {
     return fail(err);
   }
-};
+}
 
 export function _decodeURIComponent(fail, succeed, input) {
   try {
@@ -42,7 +42,7 @@ export function _decodeURIComponent(fail, succeed, input) {
 
 export function _decodeFormURLComponent(fail, succeed, input) {
   return _decodeURIComponent(fail, succeed, input.replace(/\+/g, " "));
-};
+}
 
 export function _encodeURI(fail, succeed, input) {
   try {
@@ -50,7 +50,7 @@ export function _encodeURI(fail, succeed, input) {
   } catch (err) {
     return fail(err);
   }
-};
+}
 
 export function _decodeURI(fail, succeed, input) {
   try {
@@ -58,4 +58,4 @@ export function _decodeURI(fail, succeed, input) {
   } catch (err) {
     return fail(err);
   }
-};
+}

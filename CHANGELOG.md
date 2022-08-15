@@ -12,6 +12,11 @@ Bugfixes:
 
 Other improvements:
 
+## [v3.1.0](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v3.1.0) - 2022-08-16
+
+New features:
+- Added `encodeURI`, `decodeURI` functions (#4 by @srghma)
+
 ## [v3.0.0](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v3.0.0) - 2022-04-27
 
 Breaking changes:
@@ -29,7 +34,6 @@ Other improvements:
 Breaking changes:
 
 New features:
-- Added `encodeURI`, `decodeURI` functions (#4 by @srghma)
 
 Bugfixes:
 

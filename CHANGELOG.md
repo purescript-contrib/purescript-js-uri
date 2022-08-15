@@ -29,6 +29,7 @@ Other improvements:
 Breaking changes:
 
 New features:
+- Added `encodeURI`, `decodeURI` functions (#4 by @srghma)
 
 Bugfixes:
 

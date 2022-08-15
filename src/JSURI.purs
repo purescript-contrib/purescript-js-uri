@@ -1,8 +1,10 @@
 module JSURI
   ( encodeURIComponent
   , encodeFormURLComponent
+  , encodeURI
   , decodeURIComponent
   , decodeFormURLComponent
+  , decodeURI
   ) where
 
 import Prelude
@@ -87,3 +89,13 @@ foreign import _decodeFormURLComponent :: Fn3 (String -> Maybe String) (String -
 -- | ```
 decodeFormURLComponent :: String -> Maybe String
 decodeFormURLComponent = runFn3 _decodeFormURLComponent (const Nothing) Just
+
+foreign import _encodeURI :: Fn3 (String -> Maybe String) (String -> Maybe String) String (Maybe String)
+
+encodeURI :: String -> Maybe String
+encodeURI = runFn3 _encodeURI (const Nothing) Just
+
+foreign import _decodeURI :: Fn3 (String -> Maybe String) (String -> Maybe String) String (Maybe String)
+
+decodeURI :: String -> Maybe String
+decodeURI = runFn3 _decodeURI (const Nothing) Just

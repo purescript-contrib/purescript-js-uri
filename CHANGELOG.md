@@ -11,6 +11,10 @@ New features:
 Bugfixes:
 
 Other improvements:
+
+## [v3.1.1](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v3.1.1) - 2026-10-10
+
+Other improvements:
 - Migrate to registry-backed Spago and update repository tooling and CI actions.
 
 ## [v3.1.0](https://github.com/purescript-contrib/purescript-js-uri/releases/tag/v3.1.0) - 2022-08-16
